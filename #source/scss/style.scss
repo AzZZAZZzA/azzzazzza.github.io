@@ -1,0 +1,336 @@
+@import "_null";
+/*and*/
+@mixin flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@import "_header";
+
+@import "_app";
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap");
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.fullscreen {
+  min-height: 100vh;
+  background-color: #303030;
+}
+.top {
+  display: flex;
+  &__body {
+    width: 100%;
+    min-height: 980px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__logo {
+    width: 29.8%;
+    display: inline-block;
+    margin: 4.4% 35.1% 0;
+    padding-left: (88.01/1920) * 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__light {
+    position: absolute;
+    top: (146/980) * 100%;
+    width: (945/1920) * 100vw;
+    height: (630/980) * 100vh;
+    margin: 0 24.9%;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__title {
+    position: absolute;
+    bottom: (314/980) * 100%;
+    width: (1400/1920) * 100vw;
+    margin: 0 13%;
+    font-family: Ubuntu;
+    text-align: center;
+    font-size: 3.1vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #866d3d;
+  }
+
+  &__scroll {
+    position: absolute;
+    top: (820/980) * 100%;
+    margin: 0 42.3vw;
+    width: (270/1920) * 100vw;
+    -webkit-animation: 1s linear 0s infinite alternate scrolling;
+    -moz-animation: 1s linear 0s infinite alternate scrolling;
+    -o-animation: 1s linear 0s infinite alternate scrolling;
+    animation: 1s linear 0s infinite alternate scrolling;
+    a {
+      text-align: center;
+      display: block;
+      width: 100%;
+      font-family: Ubuntu;
+      font-size: (20/1920) * 100vw;
+      line-height: 1.2;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #454545;
+      &:after {
+        content: "";
+        background-image: url(/img/down_192.png);
+        display: block;
+        width: 46px;
+        height: 25px;
+        margin: 14px auto 0;
+      }
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: (263/980) * 100%;
+    left: (199/1920) * 100%;
+    width: (1521/1920) * 100%;
+    height: (690/980) * 100%;
+    background-color: #303030;
+    z-index: 5;
+    display: none;
+    flex-direction: column;
+    border: 1px solid #454545;
+  }
+  &__menu-h2 {
+    font-family: PlayfairDisplaySC;
+    font-stretch: ultra-condensed;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #b4b4b4;
+    display: flex;
+    flex: 0 0 20.3%;
+    align-items: center;
+    justify-content: center;
+    z-index: 7;
+  }
+  &__boxMenu {
+    display: flex;
+    flex: 0 0 79.7%;
+  }
+  &__menu-imgBox {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: (684/690) * 100%;
+    width: (1029/1521) * 100%;
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      height: 100%;
+      bottom: 0px;
+      width: 100%;
+    }
+  }
+
+  &__menu-nav {
+    flex: 0 0 25.5%;
+    padding-left: 8.3%;
+    margin-top: -0.4%;
+    a {
+      font-family: Ubuntu;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #b4b4b4;
+    }
+    z-index: 7;
+    li {
+      margin-bottom: 13.5%;
+    }
+    li a {
+      position: relative;
+      &:hover {
+        font-weight: 400;
+        color: #b69b67;
+        overflow: hidden;
+      }
+      &:hover {
+        span:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -10%;
+          background-color: #b69b67;
+          width: 100%;
+          height: 1px;
+        }
+      }
+    }
+  }
+
+  &__menu-log {
+    flex: 0 0 34%;
+    z-index: 7;
+    margin-top: -0.5%;
+
+    a {
+      font-family: Ubuntu;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #695631;
+    }
+    li {
+      margin-bottom: 6.9%;
+    }
+    li a {
+      &:hover {
+        color: #b4b4b4;
+      }
+    }
+  }
+
+  &__menu-search {
+    margin-top: -0.6%;
+    flex: 0 0 32.22%;
+    z-index: 7;
+    input[type="text"] {
+      width: 100%;
+      border-bottom: 1px solid #cccccc;
+
+      font-family: Ubuntu;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #454545;
+      background: url(/img/search_430.png) right no-repeat;
+    }
+  }
+}
+.active {
+  display: flex;
+}
+
+.box {
+  border: 2px solid #454545;
+  background: #303030;
+  position: absolute;
+  top: (263/980) * 100%;
+  right: (200/1920) * 100%;
+  width: 82px;
+  height: 82px;
+  z-index: 6;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid #b59c6b;
+    .header_burger:before,
+    .header_burger:after {
+      background-color: #b59c6b;
+    }
+    .header_burger span {
+      background-color: #b59c6b;
+    }
+  }
+}
+.header_burger {
+  position: relative;
+  display: block;
+  width: 82px;
+  height: 82px;
+}
+.header_burger span {
+  position: absolute;
+  background-color: #999999;
+  left: 13px;
+  width: 52px;
+  height: 2px;
+  top: 38px;
+  transition: all 0.5s ease 0s;
+}
+.header_burger:before,
+.header_burger:after {
+  content: "";
+  background-color: #999999;
+  position: absolute;
+  width: 52px;
+  height: 2px;
+  left: 13px;
+  transition: all 0.3s ease-in 0s;
+}
+.header_burger:before {
+  top: 20px;
+}
+.header_burger:after {
+  bottom: 24px;
+}
+
+.header_burger.active:before {
+  transform: rotate(45deg);
+  top: 38px;
+  left: 4px;
+  width: 70px;
+}
+.header_burger.active:after {
+  transform: rotate(-45deg);
+  bottom: 42px;
+  left: 4px;
+  width: 70px;
+}
+.header_burger.active span {
+  transform: scale(0);
+}
+
+.header__nav.active {
+  top: 0;
+  overflow: auto;
+}
+
+@-webkit-keyframes scrolling {
+  from {
+    top: (820/980) * 100%;
+  }
+  to {
+    top: (845/980) * 100%;
+  }
+}
+@-moz-keyframes scrolling {
+  from {
+    top: (820/980) * 100%;
+  }
+  to {
+    top: (845/980) * 100%;
+  }
+}
+@-o-keyframes scrolling {
+  from {
+    top: (820/980) * 100%;
+  }
+  to {
+    top: (845/980) * 100%;
+  }
+}
+@keyframes scrolling {
+  from {
+    top: (820/980) * 100%;
+  }
+  to {
+    top: (845/980) * 100%;
+  }
+}
+
+@import "_footer";

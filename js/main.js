@@ -1,0 +1,1 @@
+function sch(){var c=srch.value;srch.onfocus=function(){srch.value==srch.getAttribute("value")&&(srch.value="")},srch.onblur=function(){""==srch.value&&(srch.value=c)}}window.onload=function(){sch(),burger.onclick=function(c){burger.classList.toggle("active"),menu.classList.toggle("active")}};

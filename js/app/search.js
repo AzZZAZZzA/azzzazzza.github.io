@@ -1,0 +1,1 @@
+function srch(){alert("focus");var c=srch.value;srch.onfocus=function(){srch.value==srch.getAttribute("value")&&(srch.value="")},srch.onblur=function(){""==srch.value&&(srch.value=c)}}

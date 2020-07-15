@@ -1,0 +1,1 @@
+window.onload=function(){burger.onclick=function(c){burger.classList.toggle("active"),menu.classList.toggle("active")}};
