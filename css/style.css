@@ -737,6 +737,7 @@ h3 {
   font-weight: 300;
   text-transform: uppercase;
   color: #b4b4b4;
+  font-stretch: ultra-condensed;
 }
 
 .popupSocialButton {
@@ -815,10 +816,30 @@ h3 {
   display: flex;
   width: 100%;
   height: 5.20833vw;
+  margin-bottom: 20px;
+}
+
+.popup__bottom-h3 {
+  margin-bottom: 20px;
 }
 
 .popup__form > .field {
+  height: 3.771vw;
   border: 1px solid #b4b4b4;
+  margin-bottom: 24px;
+}
+
+.popup__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .facebook {
