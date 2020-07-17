@@ -592,15 +592,20 @@ body {
 }
 
 .top__menu-search input[type="text"] {
-  width: 100%;
   border-bottom: 1px solid #cccccc;
+  width: 100%;
+  background: url(/img/search_430.png) right no-repeat;
+}
+
+.field {
+  width: 100%;
   font-family: Ubuntu;
   font-size: 30px;
   line-height: 1.2;
   font-weight: 300;
   text-transform: uppercase;
   color: #454545;
-  background: url(/img/search_430.png) right no-repeat;
+  background-color: #00000000;
 }
 
 .active {
@@ -729,21 +734,32 @@ h2 {
 h3 {
   font-family: Ubuntu;
   font-size: 30px;
-  line-height: 100px;
   font-weight: 300;
   text-transform: uppercase;
   color: #b4b4b4;
 }
 
 .popupSocialButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30.69705%;
-  height: 48.66667%;
-  border: 1px solid #fff;
+  height: 73%;
+  border: 1px solid;
   font-family: Ubuntu;
   font-size: 30px;
-  line-height: 100px;
   font-weight: 300;
-  color: #fff;
+  margin: 0px 0px 0px 4.02145%;
+}
+
+.popupSocialButton:first-child {
+  margin: 0px;
 }
 
 .popup {
@@ -751,15 +767,12 @@ h3 {
   width: 100%;
   height: 100%;
   background-color: #303030a0;
-  top: 0;
+  top: 263px;
   left: 0;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -767,23 +780,11 @@ h3 {
 
 .popup__body {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   width: 44.0625%;
-  min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 50px;
+  background-color: #303030;
+  border: 1px solid #b4b4b4;
+  padding: 35px 50px 50px 50px;
 }
 
 .popup__top {
@@ -800,14 +801,41 @@ h3 {
   width: 100%;
 }
 
+.popup__top-h2 {
+  margin-bottom: 4.23729%;
+}
+
+.popup__tpo-h3 {
+  margin-bottom: 2.54237%;
+}
+
 .popup__top-case {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 5.20833vw;
+}
+
+.popup__form > .field {
+  border: 1px solid #b4b4b4;
 }
 
 .facebook {
   color: #3b5998;
   border-color: #3b5998;
+}
+
+.google {
+  color: #dd4b39;
+  border-color: #dd4b39;
+}
+
+.twitter {
+  border-color: #1da1f2;
+  color: #1da1f2;
+}
+
+#popup_in {
+  display: none;
 }

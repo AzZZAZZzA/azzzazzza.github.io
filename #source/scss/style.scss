@@ -198,18 +198,22 @@ body {
     flex: 0 0 32.22%;
     z-index: 7;
     input[type="text"] {
-      width: 100%;
       border-bottom: 1px solid #cccccc;
-
-      font-family: Ubuntu;
-      font-size: 30px;
-      line-height: 1.2;
-      font-weight: 300;
-      text-transform: uppercase;
-      color: #454545;
+      width: 100%;
       background: url(/img/search_430.png) right no-repeat;
     }
   }
+}
+.field {
+  width: 100%;
+
+  font-family: Ubuntu;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #454545;
+  background-color: #00000000;
 }
 .active {
   display: flex;
@@ -332,43 +336,43 @@ h2 {
 h3 {
   font-family: Ubuntu;
   font-size: 30px;
-  line-height: 100px;
   font-weight: 300;
   text-transform: uppercase;
   color: #b4b4b4;
 }
 .popupSocialButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: (229/746) * 100%;
-  height: (73/150) * 100%;
-  border: 1px solid #fff;
+  height: (73/100) * 100%;
+  border: 1px solid;
   font-family: Ubuntu;
   font-size: 30px;
-  line-height: 100px;
   font-weight: 300;
-  color: #fff;
+  margin: 0px 0px 0px (30/746) * 100%;
+  &:first-child {
+    margin: 0px;
+  }
 }
 .popup {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #303030a0;
-  top: 0;
+  top: 263px;
   left: 0;
   z-index: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
 
   &__body {
     position: absolute;
-    z-index: 2;
+    z-index: 5;
     width: (846/1920) * 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
+    background-color: #303030;
+    border: 1px solid #b4b4b4;
+    padding: 35px 50px 50px 50px;
   }
 
   &__top {
@@ -379,16 +383,23 @@ h3 {
   }
 
   &__top-h2 {
+    margin-bottom: (25/590) * 100%;
   }
 
   &__tpo-h3 {
+    margin-bottom: (15/590) * 100%;
   }
 
   &__top-case {
     display: flex;
     width: 100%;
+    height: (100/1920) * 100vw;
   }
-
+  &__bottom-h3 {
+  }
+  &__form > .field {
+    border: 1px solid #b4b4b4;
+  }
   &__bottom {
   }
 }
@@ -396,9 +407,20 @@ h3 {
   color: #3b5998;
   border-color: #3b5998;
 }
-.google + {
+.google {
+  color: #dd4b39;
+  border-color: #dd4b39;
 }
 .twitter {
+  border-color: #1da1f2;
+  color: #1da1f2;
 }
 .field {
+}
+#popup_in {
+  display: none;
+}
+
+#popup_up {
+  //isplay: none;
 }
