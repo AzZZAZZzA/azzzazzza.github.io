@@ -777,15 +777,17 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .popup__body {
   position: absolute;
   z-index: 5;
-  width: 44.0625%;
+  width: 43.72093vw;
   background-color: #303030;
   border: 1px solid #b4b4b4;
-  padding: 35px 50px 50px 50px;
+  padding: 1.808vw 2.531vw 2.531vw 2.531vw;
 }
 
 .popup__top {
@@ -820,13 +822,21 @@ h3 {
 }
 
 .popup__bottom-h3 {
-  margin-bottom: 20px;
+  margin-bottom: 1.04167vw;
+}
+
+.popup__form input[type="text"] {
+  padding-left: 1.40625vw;
+}
+
+.popup__form input[type="password"] {
+  padding-left: 1.40625vw;
 }
 
 .popup__form > .field {
   height: 3.771vw;
   border: 1px solid #b4b4b4;
-  margin-bottom: 24px;
+  margin-bottom: 1.25vw;
 }
 
 .popup__bottom {
@@ -842,9 +852,38 @@ h3 {
           align-items: center;
 }
 
+.password {
+  display: inline-block;
+  width: 64.6%;
+  margin: 0px 4% 0px 0px;
+}
+
+.button {
+  position: relative;
+  width: 30.4%;
+  font-family: Ubuntu;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #303030;
+  height: 3.77261vw;
+  background-color: #b69b67;
+}
+
+.button:hover {
+  color: #b69b67;
+  background-color: #303030;
+  border: 1px solid #b69b67;
+}
+
 .facebook {
   color: #3b5998;
   border-color: #3b5998;
+}
+
+.facebook:hover {
+  color: #303030;
+  background-color: #3b5998;
 }
 
 .google {
@@ -852,11 +891,37 @@ h3 {
   border-color: #dd4b39;
 }
 
+.google:hover {
+  color: #303030;
+  background-color: #dd4b39;
+}
+
 .twitter {
   border-color: #1da1f2;
   color: #1da1f2;
 }
 
+.twitter:hover {
+  color: #303030;
+  background-color: #1da1f2;
+}
+
 #popup_in {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#popup_in:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup_up {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#popup_up:target {
+  opacity: 1;
+  visibility: visible;
 }

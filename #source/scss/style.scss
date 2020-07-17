@@ -366,14 +366,16 @@ h3 {
   z-index: 1;
   display: flex;
   justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   &__body {
     position: absolute;
     z-index: 5;
-    width: (846/1920) * 100%;
+    width: (846/1935) * 100vw;
     background-color: #303030;
     border: 1px solid #b4b4b4;
-    padding: 35px 50px 50px 50px;
+    padding: 1.808vw 2.531vw 2.531vw 2.531vw;
   }
 
   &__top {
@@ -398,37 +400,90 @@ h3 {
     margin-bottom: 20px;
   }
   &__bottom-h3 {
-    margin-bottom: 20px;
+    margin-bottom: (20/1920) * 100vw;
   }
+  &__form {
+    input[type="text"] {
+      padding-left: (27/1920) * 100vw;
+    }
+    input[type="password"] {
+      padding-left: (27/1920) * 100vw;
+    }
+  }
+
   &__form > .field {
     height: 3.771vw;
     border: 1px solid #b4b4b4;
-    margin-bottom: 24px;
+    margin-bottom: (24/1920) * 100vw;
   }
   &__bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  &__bottom-button {
+  }
+}
+.password {
+  display: inline-block;
+  width: 64.6%;
+  margin: 0px 4% 0px 0px;
+}
+.button {
+  position: relative;
+  width: 30.4%;
+  font-family: Ubuntu;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #303030;
+  height: (73/1935) * 100vw;
+  background-color: #b69b67;
+  &:hover {
+    color: #b69b67;
+    background-color: #303030;
+    border: 1px solid #b69b67;
+  }
 }
 .facebook {
   color: #3b5998;
   border-color: #3b5998;
+  &:hover {
+    color: #303030;
+    background-color: #3b5998;
+  }
 }
 .google {
   color: #dd4b39;
   border-color: #dd4b39;
+  &:hover {
+    color: #303030;
+    background-color: #dd4b39;
+  }
 }
 .twitter {
   border-color: #1da1f2;
   color: #1da1f2;
+  &:hover {
+    color: #303030;
+    background-color: #1da1f2;
+  }
 }
 .field {
 }
 #popup_in {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
-
+#popup_in:target {
+  opacity: 1;
+  visibility: visible;
+}
 #popup_up {
-  //isplay: none;
+  opacity: 0;
+  visibility: hidden;
+}
+#popup_up:target {
+  opacity: 1;
+  visibility: visible;
 }
