@@ -1,5 +1,6 @@
 function sch() {
    var val = srch.value;
+
    srch.onfocus = function () {
 
       if (srch.value == srch.getAttribute("value")) {
@@ -11,4 +12,4 @@ function sch() {
          srch.value = val;
       }
    };
-}
+};

@@ -1,6 +1,7 @@
 
 window.onload = function () {
 	sch();
+
 	burger.onclick = function (event) {
 		burger.classList.toggle("active");
 		menu.classList.toggle("active");

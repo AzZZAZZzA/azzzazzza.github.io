@@ -49,14 +49,14 @@
 						</nav>
 						<div class="top__menu-log">
 							<ul>
-								<li class="up"><a href="#popup_up">Sign up</a></li>
-								<li class="in"><a href="#popup_in">Sign in</a></li>
+								<li class=" up"><a class="popup-link" href="#popup_up">Sign up</a></li>
+								<li class=" in "><a class="popup-link" href="#popup_in">Sign in</a></li>
 								<li class="message"><a href="">send message</a></li>
 							</ul>
 						</div>
 						<div class="top__menu-search">
 							<form action="" method="post">
-								<input type="text" autocomplete="off" id="srch" class="field" value="search ..."
+								<input type="text" autocomplete="off" id="srch" class="field srch" value="search ..."
 									title="Search here ..." />
 							</form>
 						</div>
@@ -97,35 +97,61 @@
 		asperiores cum, reprehenderit minima ad odio ipsam necessitatibus, illo odit est quidem inventore rem molestiae
 		voluptates sequi! Dolores eligendi nostrum impedit officia.</div>
 	</div>
-	<div id="popup_up" class="popup">
-		<div class="popup__body">
-			<div class="popup__top">
-				<h2 class="popup__top-h2">sign up </h2>
-				<h3 class="popup__tpo-h3">sign up using</h3>
-				<div class="popup__top-case">
-					<a href="#" class="popupSocialButton facebook">facebook</a>
-					<a href="#" class="popupSocialButton google">google+</a>
-					<a href="#" class="popupSocialButton twitter">twitter</a>
+	<div id="popup_up" class="popup ">
+		<div class="popup__content">
+			<div class="popup__body">
+				<div class="popup__top">
+					<h2 class="popup__top-h2">sign up </h2>
+					<h3 class="popup__tpo-h3">sign up using</h3>
+					<div class="popup__top-case">
+						<a href="#" class="popupSocialButton facebook">facebook</a>
+						<a href="#" class="popupSocialButton google">google+</a>
+						<a href="#" class="popupSocialButton twitter">twitter</a>
+					</div>
+				</div>
+				<div class="popup__bottom">
+					<h3 class="popup__bottom-h3">or enter following information</h3>
+					<form name="sign_up" method="post" id="" action="#" class="popup__form">
+						<input type="text" autocomplete="off" class="field name" value="Name" title="Write your name" />
+						<input type="email" autocomplete="on" class="field email" value="Email" title="Write your Email" />
+						<input type="password" autocomplete="on" class="field password" value="Password"
+							title="Write your password" />
+						<input type="submit" class="button popup__bottom-button" value="sing up">
+
+					</form>
 				</div>
 			</div>
-			<div class="popup__bottom">
-				<h3 class="popup__bottom-h3">or enter following information</h3>
-				<form name="sign_up" method="post" action="#" class="popup__form">
-					<input type="text" autocomplete="off" id="name srch" class="field name" value="Name"
-						title="Write your name" />
-					<input type="text" autocomplete="off" id="email srch" class="field email" value="Email"
-						title="Write your Email" />
-					<input type="password" autocomplete="on" id="password srch" class="field password" value="Password"
-						title="Write your password" />
-					<input type="submit" class="button popup__bottom-button" value="sing up">
-
-				</form>
-			</div>
-
 		</div>
 
 	</div>
-	<div id="popup_in" class="popup"></div>
+	<div id="popup_in" class="popup ">
+		<div class="popup__content">
+			<div class="popup__body">
+				<div class="popup__top">
+					<h2 class="popup__top-h2">sign in </h2>
+					<h3 class="popup__tpo-h3">sign in using</h3>
+					<div class="popup__top-case">
+						<a href="#" class="popupSocialButton facebook">facebook</a>
+						<a href="#" class="popupSocialButton google">google+</a>
+						<a href="#" class="popupSocialButton twitter">twitter</a>
+					</div>
+				</div>
+				<div class="popup__bottom">
+					<h3 class="popup__bottom-h3">or your account</h3>
+					<form name="sign_up" method="post" id="login_form " action="#" class="popup__form">
+						<input type="email" autocomplete="on" class="field email " name="username" value="Email"
+							title="Write your Email" />
+						<input type="password" name="password" autocomplete="on" class="field password in" value="Password"
+							title="Write your password" />
+						<input type="submit" class="button popup__bottom-button in" value="sing up">
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="js/app/popup.js"></script>
 </body>
 
 </html>

@@ -11,9 +11,21 @@
 @import "_app";
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap);
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap");
+input {
+  outline: none;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #303030 !important; /* Цвет фона */
+  -webkit-text-fill-color: #707070 !important; /* цвет текста */
+  color: #707070 !important; /* цвет текста */
+}
 html,
 body {
   height: 100%;
+}
+body.lock {
+  overflow: hidden;
+  background-color: #303030;
 }
 .wrapper {
   min-height: 100vh;
@@ -358,18 +370,18 @@ h3 {
 }
 .popup {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-color: #303030a0;
   top: 263px;
   left: 0;
   z-index: 1;
-  display: flex;
-  justify-content: center;
   overflow-y: auto;
   overflow-x: hidden;
+  transition: all 0.4s ease 0s;
 
   &__body {
+    margin: 0 28vw;
     position: absolute;
     z-index: 5;
     width: (846/1935) * 100vw;
@@ -409,6 +421,9 @@ h3 {
     input[type="password"] {
       padding-left: (27/1920) * 100vw;
     }
+    input[type="email"] {
+      padding-left: (27/1920) * 100vw;
+    }
   }
 
   &__form > .field {
@@ -429,6 +444,9 @@ h3 {
   width: 64.6%;
   margin: 0px 4% 0px 0px;
 }
+.password.in {
+  width: 100%;
+}
 .button {
   position: relative;
   width: 30.4%;
@@ -444,6 +462,9 @@ h3 {
     background-color: #303030;
     border: 1px solid #b69b67;
   }
+}
+.button.in {
+  margin: 0 35%;
 }
 .facebook {
   color: #3b5998;
@@ -475,7 +496,7 @@ h3 {
   opacity: 0;
   visibility: hidden;
 }
-#popup_in:target {
+#popup_in.open {
   opacity: 1;
   visibility: visible;
 }
@@ -483,7 +504,7 @@ h3 {
   opacity: 0;
   visibility: hidden;
 }
-#popup_up:target {
+#popup_up.open {
   opacity: 1;
   visibility: visible;
 }
