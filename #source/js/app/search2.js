@@ -8,12 +8,13 @@ function sch() {
          function inputFocus() {
             if (input.getAttribute("type") != "submit" && input.value == val) {
                input.value = "";
-               input.style = "color: #707070;"
+               input.style = "color: #707070";
             }
          }
          function inputBlur() {
             if (input.value == "") {
                input.value = input.getAttribute("value");
+               input.style = "color: #454545";
             }
          };
          inputFocus();

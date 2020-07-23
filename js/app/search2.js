@@ -1,0 +1,1 @@
+"use strict";function sch(){for(var t=document.getElementsByTagName("form"),e=0;e<t.length;e++)t[e].onclick=function(t){var e=t.target,u=e.getAttribute("value");"submit"!=e.getAttribute("type")&&e.value==u&&(e.value="",e.style="color: #707070"),e.onblur=function(){""==e.value&&(e.value=e.getAttribute("value"),e.style="color: #454545")}}}

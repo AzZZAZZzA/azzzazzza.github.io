@@ -5,7 +5,6 @@
 	<title>Домашка</title>
 	<!-- Подключаем CSS -->
 	<link rel="stylesheet" href="css/style.css" />
-	<script type="text/javascript" src="js/main.js"></script>
 	<!-- Кодировка страницы -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no ">
@@ -112,7 +111,8 @@
 					<h3 class="popup__bottom-h3">or enter following information</h3>
 					<form name="sign_up" method="post" id="" action="#" class="popup__form">
 						<input type="text" autocomplete="off" class="field name" value="Name" title="Write your name" />
-						<input type="email" autocomplete="on" class="field email" value="Email" title="Write your Email" />
+						<input type="email" autocomplete="on" class="field email" value="Email" name="username"
+							title="Write your Email" />
 						<input type="password" autocomplete="on" class="field password" value="Password"
 							title="Write your password" />
 						<input type="submit" class="button popup__bottom-button" value="sing up">
@@ -149,6 +149,7 @@
 		</div>
 
 	</div>
+	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/app/popup.js"></script>
 </body>
 
