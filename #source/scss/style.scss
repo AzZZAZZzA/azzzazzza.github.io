@@ -6,7 +6,7 @@
   display: -ms-flexbox;
   display: flex;
 }
-@import "_header";
+//@import "_header";
 
 @import "_app";
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap);
@@ -25,7 +25,7 @@ body {
 }
 body.lock {
   overflow: hidden;
-  background-color: #303030;
+  background-color: #101010;
 }
 .wrapper {
   min-height: 100vh;
@@ -35,13 +35,13 @@ body.lock {
 
 .fullscreen {
   min-height: 100vh;
-  background-color: #303030;
+  background-color: #101010;
 }
 .top {
   display: flex;
   &__body {
     width: 100%;
-    min-height: 980px;
+    min-height: (1080/2190) * 100vw;
     position: relative;
     z-index: 1;
   }
@@ -55,15 +55,73 @@ body.lock {
       width: 100%;
     }
   }
-
-  &__light {
+  //@-webkit-keyframes clock {
+  //  from {
+  //    -webkit-transform: rotate(0deg);
+  //  }
+  //  to {
+  //    -webkit-transform: rotate(360deg);
+  //  }
+  //}
+  //@-moz-keyframes clock {
+  //  from {
+  //    -moz-transform: rotate(0deg);
+  //  }
+  //  to {
+  //    -moz-transform: rotate(360deg);
+  //  }
+  //}
+  //@-keyframes clock {
+  //  from {
+  //    transform: rotate(0deg);
+  //  }
+  //  to {
+  //    transform: rotate(360deg);
+  //  }
+  //}
+  &__clock {
     position: absolute;
-    top: (146/980) * 100%;
-    width: (945/1920) * 100vw;
-    height: (630/980) * 100vh;
-    margin: 0 24.9%;
-
+    top: (200/980) * 100%;
+    width: 25vw;
+    height: 25vw;
+    margin: 0 37.37%;
+    .hour {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      img.hour {
+        // -webkit-animation: clock 216s steps(60, end) infinite;
+        //-moz-animation: clock 216s steps(60, end) infinite;
+        // animation: clock 216s steps(60, end) infinite;
+      }
+    }
+    .minute {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      img.minute {
+        //-webkit-animation: clock 36s steps(60, end) infinite;
+        //-moz-animation: clock 36s steps(60, end) infinite;
+        //animation: clock 36s steps(60, end) infinite;
+      }
+    }
+    .second {
+      position: absolute;
+      height: (60/1920) * 100vw;
+      width: (60/1920) * 100vw;
+      left: (215/1920) * 100vw;
+      top: (258/1920) * 100vw;
+      img {
+        height: 80%;
+        width: 80%;
+        // -webkit-animation: clock 6s steps(60, end) infinite;
+        //-moz-animation: clock 6s steps(60, end) infinite;
+        //animation: clock 6s steps(60, end) infinite;
+      }
+    }
     img {
+      position: absolute;
+      height: 100%;
       width: 100%;
     }
   }
@@ -77,14 +135,17 @@ body.lock {
     font-size: 3.1vw;
     font-weight: 400;
     text-transform: uppercase;
-    color: #866d3d;
+    color: hsl(39, 50%, 41%);
   }
 
   &__scroll {
     position: absolute;
+    width: 100%;
     top: (820/980) * 100%;
-    margin: 0 42.3vw;
-    width: (270/1920) * 100vw;
+    display: block;
+
+    margin: 0 auto;
+
     -webkit-animation: 1s linear 0s infinite alternate scrolling;
     -moz-animation: 1s linear 0s infinite alternate scrolling;
     -o-animation: 1s linear 0s infinite alternate scrolling;
@@ -94,7 +155,7 @@ body.lock {
       display: block;
       width: 100%;
       font-family: Ubuntu;
-      font-size: (20/1920) * 100vw;
+      font-size: 20px;
       line-height: 1.2;
       font-weight: 400;
       text-transform: uppercase;
@@ -216,6 +277,7 @@ body.lock {
     }
   }
 }
+
 .field {
   width: 100%;
 
@@ -243,8 +305,8 @@ h2 {
   border: 2px solid #454545;
   background: #303030;
   position: absolute;
-  top: (263/980) * 100%;
-  right: (200/1920) * 100%;
+  top: (263/980) * 100vh;
+  right: (200/1920) * 100vw;
   width: 82px;
   height: 82px;
   z-index: 6;
@@ -508,4 +570,54 @@ h3 {
 #popup_up.open {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 980px) {
+  .box {
+    top: (160/980) * 100vh;
+    right: (260/1920) * 100vw;
+    width: 44px;
+    height: 44px;
+  }
+  .header_burger {
+    width: 30px;
+    height: 20px;
+    margin: 10px 5px;
+  }
+  .header_burger span {
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+  }
+  .header_burger:before,
+  .header_burger:after {
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .header_burger:before {
+    top: 0;
+  }
+  .header_burger:after {
+    bottom: 0;
+  }
+
+  .header_burger.active:before {
+    width: 100%;
+    left: 0;
+    top: 9px;
+  }
+  .header_burger.active:after {
+    bottom: 9px;
+    left: 0;
+    width: 100%;
+  }
+  .top__scroll {
+    a {
+    }
+  }
+}
+
+@media (max-width: 425px) {
 }

@@ -8,6 +8,7 @@
 	<!-- Кодировка страницы -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no ">
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <!-- Отображаемое тело страницы -->
 
@@ -19,8 +20,15 @@
 				<div class="top__logo">
 					<img src="/img/layers.png" alt="">
 				</div>
-				<div class="top__light">
-					<img src="/img/lampp_photo_110.png" alt="">
+				<div class="top__clock">
+					<img src="/img/clock.png" alt="">
+					<div class="hour"><img id="hour" class="hour" src="/img/hour.png" alt="">
+					</div>
+					<div class="minute"><img id="minute" class="minute" src="/img/minute.png" alt="">
+					</div>
+					<div class="second">
+						<img id="second" src="/img/second.png" alt="">
+					</div>
 				</div>
 				<h1 class="top__title">our design’s so wanted that we have to hide</h1>
 				<div class="box">
@@ -53,9 +61,10 @@
 							</ul>
 						</div>
 						<div class="top__menu-search">
-							<form action="" method="post">
+							<form action="" method="post" name='search'>
 								<input type="text" autocomplete="off" id="srch" class="field srch" value="search ..."
 									title="Search here ..." />
+
 							</form>
 						</div>
 					</div>
@@ -137,7 +146,7 @@
 				</div>
 				<div class="popup__bottom">
 					<h3 class="popup__bottom-h3">or your account</h3>
-					<form name="sign_up" method="post" id="login_form " action="#" class="popup__form">
+					<form name="sign_in" method="post" id="login_form " action="#" class="popup__form">
 						<input type="email" autocomplete="on" class="field email " name="username" value="Email"
 							title="Write your Email" />
 						<input type="password" name="password" autocomplete="on" class="field password in" value="Password"
@@ -149,8 +158,9 @@
 		</div>
 
 	</div>
-	<script type="text/javascript" src="js/main.js"></script>
+
 	<script type="text/javascript" src="js/app/popup.js"></script>
+	<script type="text/javascript" src="js/app/clock.js"></script>
 </body>
 
 </html>
