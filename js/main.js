@@ -1,1 +1,51 @@
-"use strict";function inputFocus(t,e){"submit"!=t.getAttribute("type")&&t.value==e&&(t.value="",t.style="color: #a0a0a0")}function inputBlur(t){""==t.value&&(t.value=input.getAttribute("value"),t.style="color: #454545")}function sch(){for(var t=document.getElementsByTagName("form"),e=0;e<t.length;e++)for(var u=t[e].getElementsByTagName("input"),n=function(t){var e=u[t];e.onfocus=function(){var t=e.getAttribute("value");inputFocus(e,t)},e.onblur=function(){""==e.value&&(e.value=e.getAttribute("value"),e.style="color: #454545")}},o=0;o<u.length;o++)n(o)}window.onload=function(){sch(),burger.onclick=function(t){burger.classList.toggle("active"),menu.classList.toggle("active")}},sch();
+window.onload = function () {
+   sch();
+
+   burger.onclick = function (event) {
+      burger.classList.toggle("active");
+      menu.classList.toggle("active");
+      //document.body.classList.toggle("lock"); блокировка скрола document.body 
+   };
+};
+function inputFocus(foc, val) {
+   if (foc.getAttribute("type") != "submit" && foc.value == val) {
+      foc.value = "";
+      foc.style = "color: #a0a0a0";
+   }
+}
+function inputBlur(bl) {
+   if (bl.value == "") {
+      bl.value = input.getAttribute("value");
+      bl.style = "color: #454545";
+   }
+};
+function sch() {
+   const forms = document.getElementsByTagName("form");
+   for (let i = 0; i < forms.length; i++) {
+      const form = forms[i];
+
+      let inputs = form.getElementsByTagName('input');
+      for (let j = 0; j < inputs.length; j++) {
+
+         const inputo = inputs[j];
+         inputo.onfocus = function () {
+            var val = inputo.getAttribute("value");
+            inputFocus(inputo, val);
+
+
+         }
+         inputo.onblur = function () {
+            if (inputo.value == "") {
+               inputo.value = inputo.getAttribute("value");
+               inputo.style = "color: #454545";
+            }
+
+         }
+      };
+
+   };
+
+}
+sch();
+
+
