@@ -8,6 +8,7 @@ var swiper = new Swiper('.swiper-container', {
    observeSlideChildren: true,
    pagination: {
       el: '.swiper-pagination',
+      clickable: false,
       type: 'fraction',
       renderFraction: function (currentClass, totalClass) {
 
