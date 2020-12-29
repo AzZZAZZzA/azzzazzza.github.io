@@ -69,7 +69,6 @@ for (let i = 0; i < serviceMenu.length; i++) {
 
 
 
-
 //menu.addEventListener("click", moveFunc, false);
 /*for (let i = 0; i < menu.length; i++) {
    if (menu[i]) {

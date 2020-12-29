@@ -8,7 +8,12 @@ var swiper = new Swiper('.swiper-container', {
    observeSlideChildren: true,
    pagination: {
       el: '.swiper-pagination',
-      clickable: true,
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+
+
+         return '1' + '<div class="swiper-button-prev" id="imitPrev">prev</div>' + '<span class="' + currentClass + '"></span>' + '<div class="swiper-button-next" id="imitNext">next</div>' + '<span class="' + totalClass + '"></span>'
+      }
    },
    navigation: {
       nextEl: ".swiper-button-next",
@@ -64,3 +69,16 @@ for (let index = 0; index < categoriUnits.length; index++) {
 
 };
 
+
+let imitPrev = document.getElementById('imitPrev');
+let imitNext = document.getElementById('imitNext');
+
+imitPrev.onclick = function (event) {
+   let itarget = document.getElementById('prev');
+   itarget.click();
+};
+
+imitNext.onclick = function (event) {
+   let itarget = document.getElementById('next');
+   itarget.click();
+};
