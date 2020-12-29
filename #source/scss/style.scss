@@ -1311,6 +1311,7 @@ h3 {
 .swiper-button-prev:after,
 .swiper-button-next:after {
   content: "";
+  display: none;
   width: 0;
   height: 0;
 }

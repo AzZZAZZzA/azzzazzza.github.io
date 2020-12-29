@@ -6,13 +6,14 @@ var swiper = new Swiper('.swiper-container', {
    spaceBetween: 30,
    observer: true,
    observeSlideChildren: true,
+   simulateTouch: false,
    pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
       renderFraction: function (currentClass, totalClass) {
 
 
-         return '1' + '<div class="swiper-button-prev" id="imitPrev">prev</div>' + '<span class="' + currentClass + '"></span>' + '<div class="swiper-button-next" id="imitNext">next</div>' + '<span class="' + totalClass + '"></span>'
+         return '1' + '<div class="swiper-button-prev" id="imitPrev">' + 'prev' + '</div>' + '<span class="' + currentClass + '"></span>' + '<div class="swiper-button-next" id="imitNext"> next </div>' + '<span class="' + totalClass + '"></span>'
       }
    },
    navigation: {
