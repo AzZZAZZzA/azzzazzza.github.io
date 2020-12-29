@@ -1,0 +1,11 @@
+Функция передачи клика с imitPrev,imitNext в класс swiper-button-prev  и swiper-button-next соотвественно
+
+Get name of activate unit from categori list
+Create function category button rename 
+создать хранилище для всех существующих слайдов 
+  И РЕАЛИЗОВАТЬ ПРОЦЕС СОХРАНЕНИЯ
+Создать функцию для работы с фильтром слайда:
+  - Проверка переменной фильтрация(true/false)
+  - If true что происходит новая фильтрация или All categori
+создать переменную для регистрации фильтрации
+  и ее пердачу в ф-цию 
