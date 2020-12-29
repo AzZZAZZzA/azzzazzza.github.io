@@ -13,7 +13,7 @@ var swiper = new Swiper('.swiper-container', {
       renderFraction: function (currentClass, totalClass) {
 
 
-         return '1' + '<div class="swiper-button-prev" id="imitPrev">' + 'prev' + '</div>' + '<span class="' + currentClass + '"></span>' + '<div class="swiper-button-next" id="imitNext"> next </div>' + '<span class="' + totalClass + '"></span>'
+         return '1' + '<div class="swiper-button-prev" id="imitPrev">' + 'prev' + '</div>' + '<span class="' + currentClass + ' highlighter"></span>' + '<div class="swiper-button-next" id="imitNext"> next </div>' + '<span class="' + totalClass + '"></span>'
       }
    },
    navigation: {
