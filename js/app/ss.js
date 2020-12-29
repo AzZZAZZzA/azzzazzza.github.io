@@ -76,7 +76,6 @@ imitPrev.onclick = function (event) {
    let itarget = document.getElementById('prev');
    itarget.click();
 };
-
 imitNext.onclick = function (event) {
    let itarget = document.getElementById('next');
    itarget.click();
