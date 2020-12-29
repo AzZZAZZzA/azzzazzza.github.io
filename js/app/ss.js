@@ -59,7 +59,6 @@ for (let index = 0; index < categoriUnits.length; index++) {
          const ent = fdel[e];
          //alert("del " + ent.innerText)
          ent.remove();
-
       }
    });
 
