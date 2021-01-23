@@ -141,7 +141,7 @@ body.lock {
   }
   &__title {
     position: absolute;
-    bottom: (314/980) * 100%;
+    bottom: (314/980) * 100vh;
     width: 74%;
     margin: 0 13%;
     font-family: Ubuntu;
@@ -1004,10 +1004,10 @@ h3 {
 }
 
 .portfolio {
-  margin: 0 10vw;
+  margin: 0 10vw 1.5vw;
   &__title {
     text-align: center;
-    margin: 5.2vw 0px 0px 0px;
+    margin: 5.2vw 0px 2.5vw 0px;
   }
 
   &__row {
@@ -1022,10 +1022,22 @@ h3 {
 
   &__category-batton {
     font-family: Ubuntu;
-    font-size: 30px;
     line-height: 1.2;
     font-weight: 300;
+    font-size: 1.5vw;
+    height: 3.1vw;
+    width: 12.8vw;
     border: 1px solid #454545;
+    span {
+      display: flex;
+      justify-content: center;
+      //height: 100%;
+      text-align: center;
+      padding: 5% 0;
+      span {
+        margin: 0px 0px 0px 0.5vw;
+      }
+    }
     &:hover {
       border: 1px solid #b69b67;
       span {
@@ -1042,6 +1054,16 @@ h3 {
     }
     &.active {
       border-bottom: 1px solid #303030;
+      &:after {
+        position: absolute;
+        bottom: 0;
+        content: "";
+        display: block;
+        width: 11.2vw;
+        height: 1px;
+        margin: 0 0.8vw;
+        background-color: #454545;
+      }
       &:hover {
         border: 1px solid #454545;
         border-bottom: 1px solid #303030;
@@ -1097,11 +1119,13 @@ h3 {
     }
   }
   &__category-row {
-    width: 12.7vw;
+    width: 12.8vw;
   }
   &__category-list {
+    padding: 1% 0px 0px 0px;
     margin: 0 auto;
     z-index: 10;
+    width: 12.8vw;
     background-color: #303030;
     border: 1px solid #454545;
     border-top: none;
@@ -1115,7 +1139,9 @@ h3 {
   &__category-unit {
     //display: none;
     font-family: Ubuntu;
-    font-size: 30px;
+    font-size: 1.5vw;
+    height: 3.1vw;
+    width: 12.8vw;
     line-height: 1.2;
     font-weight: 300;
     a {
@@ -1130,23 +1156,28 @@ h3 {
         color: #b69b67;
       }
     }
+    &.active {
+      display: none;
+      //background-color: red;
+    }
   }
 
   &__slider {
   }
 }
 .swiper-container {
-  height: 35vw;
+  margin-top: 3.6vw;
+  height: 30vw;
 }
 .swiper-wrapper {
 }
 .swiper-slide {
-  height: 14vw;
+  height: 13vw;
   //overflow: hidden;
   &__image {
     z-index: 1;
     position: absolute;
-    height: 14vw;
+    height: 13vw;
     overflow: hidden;
     width: 100%;
     img {
@@ -1273,12 +1304,20 @@ h3 {
     }
   }
 }
+.swiper-pagination {
+  color: #454545;
+  font-family: Ubuntu;
+  font-size: 0.8vw;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 .swiper-button-prev,
 .swiper-button-next {
   position: relative;
   top: 1px;
-  width: 45px;
-  height: 15px;
+  width: 2.3vw;
+  height: 0.8vw;
   z-index: 10;
   cursor: pointer;
   display: inline-block;
@@ -1290,7 +1329,8 @@ h3 {
     no-repeat center;
   overflow: hidden;
   font-family: Ubuntu;
-  font-size: 15px;
+  font-size: 0.8vw;
+  line-height: 20px;
   font-weight: 500;
   text-transform: uppercase;
   color: #b4b4b4;

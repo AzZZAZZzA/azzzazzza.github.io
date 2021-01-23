@@ -235,7 +235,7 @@ body.lock {
 
 .top__title {
   position: absolute;
-  bottom: 32.04082%;
+  bottom: 32.04082vh;
   width: 74%;
   margin: 0 13%;
   font-family: Ubuntu;
@@ -1270,12 +1270,12 @@ h3 {
 }
 
 .portfolio {
-  margin: 0 10vw;
+  margin: 0 10vw 1.5vw;
 }
 
 .portfolio__title {
   text-align: center;
-  margin: 5.2vw 0px 0px 0px;
+  margin: 5.2vw 0px 2.5vw 0px;
 }
 
 .portfolio__category {
@@ -1294,10 +1294,27 @@ h3 {
 
 .portfolio__category-batton {
   font-family: Ubuntu;
-  font-size: 30px;
   line-height: 1.2;
   font-weight: 300;
+  font-size: 1.5vw;
+  height: 3.1vw;
+  width: 12.8vw;
   border: 1px solid #454545;
+}
+
+.portfolio__category-batton span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 5% 0;
+}
+
+.portfolio__category-batton span span {
+  margin: 0px 0px 0px 0.5vw;
 }
 
 .portfolio__category-batton:hover {
@@ -1318,6 +1335,17 @@ h3 {
 
 .portfolio__category-batton.active {
   border-bottom: 1px solid #303030;
+}
+
+.portfolio__category-batton.active:after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 11.2vw;
+  height: 1px;
+  margin: 0 0.8vw;
+  background-color: #454545;
 }
 
 .portfolio__category-batton.active:hover {
@@ -1386,12 +1414,14 @@ h3 {
 }
 
 .portfolio__category-row {
-  width: 12.7vw;
+  width: 12.8vw;
 }
 
 .portfolio__category-list {
+  padding: 1% 0px 0px 0px;
   margin: 0 auto;
   z-index: 10;
+  width: 12.8vw;
   background-color: #303030;
   border: 1px solid #454545;
   border-top: none;
@@ -1405,7 +1435,9 @@ h3 {
 
 .portfolio__category-unit {
   font-family: Ubuntu;
-  font-size: 30px;
+  font-size: 1.5vw;
+  height: 3.1vw;
+  width: 12.8vw;
   line-height: 1.2;
   font-weight: 300;
 }
@@ -1422,18 +1454,23 @@ h3 {
   color: #b69b67;
 }
 
+.portfolio__category-unit.active {
+  display: none;
+}
+
 .swiper-container {
-  height: 35vw;
+  margin-top: 3.6vw;
+  height: 30vw;
 }
 
 .swiper-slide {
-  height: 14vw;
+  height: 13vw;
 }
 
 .swiper-slide__image {
   z-index: 1;
   position: absolute;
-  height: 14vw;
+  height: 13vw;
   overflow: hidden;
   width: 100%;
 }
@@ -1593,12 +1630,21 @@ h3 {
   color: #303030;
 }
 
+.swiper-pagination {
+  color: #454545;
+  font-family: Ubuntu;
+  font-size: 0.8vw;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   position: relative;
   top: 1px;
-  width: 45px;
-  height: 15px;
+  width: 2.3vw;
+  height: 0.8vw;
   z-index: 10;
   cursor: pointer;
   display: inline-block;
@@ -1612,7 +1658,8 @@ h3 {
   background: url("data:image/svg+xml,%3Csvg width='23' height='40' viewBox='0 0 23 40' fill='none' xmlns='www.w3.org/2000/svg'%3E%3Cline x1='1.93934' y1='38.9393' x2='21.9393' y2='18.9393' stroke='black' stroke-width='3'/%3E%3Cline y1='-1.5' x2='28.2843' y2='-1.5' transform='matrix(0.707107 0.707107 0.707107 -0.707107 3 0)' stroke='black' stroke-width='3'/%3E%3C/svg%3E%0A") no-repeat center;
   overflow: hidden;
   font-family: Ubuntu;
-  font-size: 15px;
+  font-size: 0.8vw;
+  line-height: 20px;
   font-weight: 500;
   text-transform: uppercase;
   color: #b4b4b4;
