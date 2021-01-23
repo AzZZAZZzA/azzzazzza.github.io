@@ -1,7 +1,22 @@
 let slideSave = document.getElementById('cont').innerHTML;
 
+<<<<<<< HEAD
 function swiper() {
    //console.log('Start f swiper');
+=======
+var swiper = new Swiper('.swiper-container', {
+   slidesPerView: 2,
+   slidesPerColumn: 2,
+   slidesPerGroup: 2,
+   spaceBetween: 30,
+   observer: true,
+   observeSlideChildren: true,
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: false,
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+>>>>>>> ffa335487cbbcc6d150d1f922fb7e30c959165e9
 
    var swiper = new Swiper('.swiper-container', {
       slidesPerView: 2,
@@ -170,4 +185,18 @@ for (let index = 0; index < categoriUnits.length; index++) {
 };
 
 
+<<<<<<< HEAD
 
+=======
+let imitPrev = document.getElementById('imitPrev');
+let imitNext = document.getElementById('imitNext');
+
+imitPrev.onclick = function (event) {
+   let itarget = document.getElementById('prev');
+   itarget.click();
+};
+imitNext.onclick = function (event) {
+   let itarget = document.getElementById('next');
+   itarget.click();
+};
+>>>>>>> ffa335487cbbcc6d150d1f922fb7e30c959165e9
