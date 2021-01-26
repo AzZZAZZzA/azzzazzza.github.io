@@ -1809,6 +1809,18 @@ h3 {
     right: -0.19vw;
     width: 2vw;
   }
+  .portfolio__category-row {
+    width: 25.6vw;
+    height: 1px;
+  }
+  .portfolio__category-list {
+    width: 25.6vw;
+  }
+  .portfolio__category-unit {
+    margin: auto;
+    font-size: 2vw;
+    height: 5.2vw;
+  }
 }
 
 @media (max-width: 600px) {
