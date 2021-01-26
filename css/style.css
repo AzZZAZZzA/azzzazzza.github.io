@@ -484,7 +484,6 @@ body.lock {
 h2 {
   font-family: PlayfairDisplaySC;
   font-stretch: ultra-condensed;
-  font-size: 60px;
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
@@ -932,7 +931,7 @@ h3 {
 }
 
 .services__title {
-  margin: 100px 0px 45px 0px;
+  margin: 5.2vw 0px 2.3vw 0px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1076,7 +1075,7 @@ h3 {
   }*/
 .h2 {
   font-family: PlayfairDisplaySC;
-  font-size: 60px;
+  font-size: 3.1vw;
   font-weight: 700;
   text-transform: uppercase;
   color: #b4b4b4;
@@ -1096,6 +1095,9 @@ h3 {
 }
 
 @media (max-width: 1500px) {
+  .h2 {
+    font-size: 4vw;
+  }
   .services__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1163,6 +1165,9 @@ h3 {
 }
 
 @media (max-width: 1000px) {
+  .h2 {
+    font-size: 5vw;
+  }
   .services__menu {
     margin: 0 2.5%;
   }
@@ -1202,6 +1207,9 @@ h3 {
 }
 
 @media (max-width: 600px) {
+  .h2 {
+    font-size: 6vw;
+  }
   .services__menu {
     margin: 0 5%;
     -ms-flex-wrap: wrap;
@@ -1270,7 +1278,7 @@ h3 {
 }
 
 .portfolio {
-  margin: 0 10vw 1.5vw;
+  padding: 0 10vw 1.5vw;
 }
 
 .portfolio__title {
@@ -1578,7 +1586,7 @@ h3 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
-  margin: 1.3vw;
+  margin: 1.2vw;
   z-index: 4;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1633,7 +1641,7 @@ h3 {
 .swiper-pagination {
   color: #454545;
   font-family: Ubuntu;
-  font-size: 0.8vw;
+  font-size: 1vw;
   line-height: 20px;
   font-weight: 500;
   text-transform: uppercase;
@@ -1644,7 +1652,7 @@ h3 {
   position: relative;
   top: 1px;
   width: 2.3vw;
-  height: 0.8vw;
+  height: 1vw;
   z-index: 10;
   cursor: pointer;
   display: inline-block;
@@ -1659,7 +1667,6 @@ h3 {
   overflow: hidden;
   font-family: Ubuntu;
   font-size: 0.8vw;
-  line-height: 20px;
   font-weight: 500;
   text-transform: uppercase;
   color: #b4b4b4;
@@ -1696,4 +1703,149 @@ h3 {
 
 .highlighter {
   color: #b69b67;
+}
+
+@media (max-width: 1500px) {
+  .portfolio__title {
+    margin: 3.5vw 0px 2vw 0px;
+  }
+  .swiper-container {
+    margin-top: 2.6vw;
+    height: 31vw;
+  }
+  .swiper-slide {
+    height: 12vw;
+  }
+  .swiper-slide__image {
+    height: 12vw;
+  }
+  .swiper-slide__info-card {
+    height: 12vw;
+    overflow: hidden;
+    position: absolute;
+    z-index: 3;
+    height: inherit;
+  }
+  .swiper-slide__background {
+    margin-left: 40%;
+  }
+  .swiper-slide__info {
+    margin: 0px 0px 0px 40%;
+    width: 60%;
+  }
+  .swiper-slide__title {
+    margin: 0.3vw 1.5vw;
+  }
+  .swiper-slide__row {
+    margin: 0.3vw;
+  }
+  .swiper-pagination {
+    height: 2vw;
+    font-size: 1.5vw;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 2vw;
+    width: 5vw;
+    line-height: 1.8;
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .portfolio {
+    padding: 0 20vw 1.5vw;
+  }
+  .portfolio__title {
+    margin: 2.5vw 0px 1.5vw 0px;
+  }
+  .swiper-slide {
+    height: 11vw;
+  }
+  .swiper-slide__image {
+    height: 11vw;
+  }
+  .swiper-slide__info-card {
+    height: 11vw;
+  }
+  .swiper-slide__content {
+    display: none;
+  }
+  .swiper-slide__title {
+    font-size: 3vw;
+  }
+  .swiper-slide__category {
+    font-size: 2vw;
+  }
+  .swiper-pagination {
+    height: 3vw;
+    font-size: 3vw;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 3vw;
+    font-size: 3vw;
+    width: 8vw;
+    line-height: 1.2;
+  }
+  .portfolio__category-batton {
+    height: 6.2vw;
+    width: 25.6vw;
+    font-size: 3vw;
+  }
+  .portfolio__category-batton span {
+    width: 25.6vw;
+  }
+  .portfolio__category-batton span span {
+    width: 3vw;
+  }
+  .portfolio__category-batton span span:before {
+    left: -0.19vw;
+    width: 2vw;
+    top: 1.7vw;
+  }
+  .portfolio__category-batton span span:after {
+    top: 1.7vw;
+    right: -0.19vw;
+    width: 2vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper-slide {
+    height: 20vw;
+  }
+  .swiper-slide__image {
+    height: 20vw;
+  }
+  .swiper-slide__info-card {
+    height: 20vw;
+  }
+  .swiper-slide__title {
+    font-size: 4vw;
+  }
+  .swiper-slide__category {
+    font-size: 3vw;
+  }
+  .portfolio__category-batton {
+    height: 6.2vw;
+    width: 25.6vw;
+    font-size: 3vw;
+  }
+  .portfolio__category-batton span {
+    width: 25.6vw;
+  }
+  .portfolio__category-batton span span {
+    width: 3vw;
+  }
+  .portfolio__category-batton span span:before {
+    left: -0.19vw;
+    width: 2vw;
+    top: 1.7vw;
+  }
+  .portfolio__category-batton span span:after {
+    top: 1.7vw;
+    right: -0.19vw;
+    width: 2vw;
+  }
 }

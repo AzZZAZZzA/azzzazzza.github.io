@@ -3,11 +3,22 @@ let slideSave = document.getElementById('cont').innerHTML;
 
 function swiper() {
    //console.log('Start f swiper');
+   let colSum;
+   let lineSum;
+   let scrolSlide;
+   let sB;
+   if (screen.width > 1000) {
+      colSum = 2; lineSum = 2; scrolSlide = 4; sB = 30;
+   } else if (screen.width > 600) {
+      colSum = 1; lineSum = 2; scrolSlide = 2; sB = 30;
+   } else {
+      colSum = 1; lineSum = 1; scrolSlide = 1; sB = 0;
+   }
    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 2,
-      slidesPerColumn: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 30,
+      slidesPerView: colSum,
+      slidesPerColumn: lineSum,
+      slidesPerGroup: scrolSlide,
+      spaceBetween: sB,
       observer: true,
       observeSlideChildren: true,
       simulateTouch: false,
@@ -43,6 +54,13 @@ function swiper() {
 }
 
 swiper();
+window.addEventListener(`resize`, event => {
+   swiper();
+}, false);
+window.addEventListener("orientationchange", function () {
+   swiper();
+}, false);
+
 
 let categoriButton = document.getElementById('portfolio__category-batton');
 let categoriList = document.getElementById("portfolio__category-list");
