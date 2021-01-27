@@ -1173,6 +1173,9 @@ h3 {
   .h2 {
     font-size: 5vw;
   }
+  .services {
+    min-height: 500px;
+  }
   .services__menu {
     margin: 0 2.5%;
   }
@@ -1264,8 +1267,8 @@ h3 {
   }
   .services__info {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1276,6 +1279,9 @@ h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .services__imgUnit.first {
+    margin: -10vw 0 0 0;
   }
   .services__imgUnit.second {
     margin: 5vw 0 0 -3.23%;

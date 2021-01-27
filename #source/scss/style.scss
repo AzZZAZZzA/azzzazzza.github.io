@@ -915,6 +915,7 @@ h3 {
     font-size: 5vw;
   }
   .services {
+    min-height: 500px;
     //margin: ;
     &__menu {
       margin: 0 2.5%;
@@ -984,6 +985,7 @@ h3 {
     &__info-content {
       padding: 25px 5.209% 0px 5.209%;
       position: relative;
+      //height: 25%;
     }
     &__infoUnit {
       width: 90vw;
@@ -991,17 +993,18 @@ h3 {
     }
     &__info-img {
       margin: 0vw 0px 0px 0px;
+      //height: 25%;
     }
 
     &__info {
-      flex: 0 0 80%;
+      flex: 0 0 60%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
     &__imgUnit {
       &.first {
-        //margin: -10vw 0 0 0;
+        margin: -10vw 0 0 0;
       }
       &.second {
         margin: 5vw 0 0 -3.23%;
