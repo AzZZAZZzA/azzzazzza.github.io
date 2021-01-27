@@ -178,7 +178,7 @@ body.lock {
 
 .top__body {
   width: 100%;
-  min-height: 49.31507vw;
+  min-height: 56.25vw;
   position: relative;
   z-index: 1;
 }
@@ -928,6 +928,8 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 56.25vw;
+  height: 100vh;
 }
 
 .services__title {
@@ -1001,11 +1003,14 @@ h3 {
 
 .services__info {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40%;
-          flex: 1 1 40%;
+      -ms-flex: 1 0 40%;
+          flex: 1 0 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .services__info-content {
@@ -1210,10 +1215,21 @@ h3 {
   .h2 {
     font-size: 6vw;
   }
+  .services__row {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 80%;
+            flex: 1 1 80%;
+  }
   .services__menu {
     margin: 0 5%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
   }
   .services__menuUnit {
     -webkit-box-flex: 0;
@@ -1244,13 +1260,25 @@ h3 {
     position: absolute;
   }
   .services__info-img {
-    margin: 40vw 0px 0px 0px;
+    margin: 0vw 0px 0px 0px;
   }
-  .services__imgUnit.first {
-    margin: -10vw 0 0 0;
+  .services__info {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .services__imgUnit.second {
-    margin: -15vw 0 0 -3.23%;
+    margin: 5vw 0 0 -3.23%;
   }
   .services__imgUnit.second img {
     width: 100%;
@@ -1348,6 +1376,7 @@ h3 {
 .portfolio__category-batton.active:after {
   position: absolute;
   bottom: 0;
+  z-index: 5;
   content: "";
   display: block;
   width: 11.2vw;
@@ -1840,24 +1869,41 @@ h3 {
     font-size: 3vw;
   }
   .portfolio__category-batton {
-    height: 6.2vw;
-    width: 25.6vw;
-    font-size: 3vw;
+    height: 9.3vw;
+    width: 38.4vw;
+    font-size: 4vw;
   }
   .portfolio__category-batton span {
-    width: 25.6vw;
+    width: 38.4vw;
   }
   .portfolio__category-batton span span {
-    width: 3vw;
+    width: 4.5vw;
   }
   .portfolio__category-batton span span:before {
-    left: -0.19vw;
-    width: 2vw;
-    top: 1.7vw;
+    left: -0.26vw;
+    width: 3vw;
+    top: 2.6vw;
   }
   .portfolio__category-batton span span:after {
-    top: 1.7vw;
-    right: -0.19vw;
-    width: 2vw;
+    top: 2.6vw;
+    right: -0.26vw;
+    width: 3vw;
+  }
+  .portfolio__category-row {
+    width: 38.4vw;
+    height: 1px;
+  }
+  .portfolio__category-list {
+    width: 38.4vw;
+  }
+  .portfolio__category-unit {
+    white-space: nowrap;
+    font-size: 4vw;
+    height: 7.2vw;
+    width: auto;
+  }
+  .portfolio__category-unit a {
+    width: 100%;
+    text-align: center;
   }
 }
