@@ -1,9 +1,0 @@
-<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|js|css|pdf|webp)$">
-  Header set Cache-Control "max-age=2592000000"
-</FilesMatch>
-AddDefaultCharset utf-8
-AddCharset utf-8 *
-<IfModule mod_charset.c>
-CharsetSourceEnc utf-8
-CharsetDefault utf-8
-</IfModule>
